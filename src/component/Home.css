@@ -1,0 +1,112 @@
+/* Global Styles */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Full height */
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* Flex container for full height */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  flex-grow: 1; /* Take the remaining height of the page */
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.cta-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background: white;
+  color: #ff7e5f;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.cta-button:hover {
+  background: #ff5733;
+  color: white;
+}
+
+/* Section Styles */
+section {
+  padding: 50px;
+  text-align: center;
+  font-size: 24px;
+  flex-grow: 1; /* Allow section to expand and take full height */
+}
+
+/* Make sure the page always scrolls */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* To make it expand to the full height */
+  overflow: auto; /* Scrollable if content exceeds the window */
+}
+
+/* Ensure that the page content can grow and contract */
+.services-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Ensure it takes the full height */
+  flex-grow: 1;
+  padding: 20px;
+}
