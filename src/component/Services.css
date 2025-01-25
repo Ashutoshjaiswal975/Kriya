@@ -1,220 +1,187 @@
-/* Global Styles */
-html, body {
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: auto;
-  font-family: Arial, sans-serif;
-  display: flex;
-  flex-direction: column;
-  overflow: auto; /* Prevent extra scrolling in the body */
-  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Add gradient background */
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Services Page Container */
-.services-container {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1; /* Use flex-grow instead of margin */
-  width: 100%;
-  margin-top: 90px; /* Offset for fixed navbar */
-  overflow-y: auto; /* Allow page scrolling */
-  padding: 10px;
-  scrollbar-width: thin; /* For Firefox */
-  scrollbar-color: #feb47b #fff; /* Customize scrollbar color */
-}
-
-.services-container::-webkit-scrollbar {
-  width: 8px; /* Scrollbar width */
-}
-
-.services-container::-webkit-scrollbar-thumb {
-  background-color: #feb47b; /* Scrollbar thumb color */
-  border-radius: 4px;
-}
-
-/* Navbar (Fixed on Top) */
+/* Navbar Styles */
 .navbar {
+  width: 100%;
+  position: fixed; /* Fixes navbar at the top */
+  top: 0;
+  left: 0;
+  background-color: #333;
+  padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #333;
-  padding: 15px 20px;
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   color: white;
-}
-
-.navbar .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures navbar stays above other elements */
 }
 
 .nav-links {
-  list-style-type: none;
   display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
-  margin-right: 20px;
+  display: inline;
 }
 
-.nav-links li a {
+.nav-links a {
   color: white;
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
 }
 
-/* Main Content (Scrollable within page) */
-.main-content {
-  flex-grow: 1;
-  width: 100%;
-  margin-top: 60px; /* Add margin to prevent overlap with navbar */
-  padding: 40px 60px; /* Add padding for spacing */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* Ensure content starts at the top */
+.nav-links a:hover {
+  color: #ffcc00;
 }
 
-/* Search Bar */
-.search-box {
-  width: 50%;
-  max-width: 400px; /* Increased max width for desktop */
-  padding: 1px;
-  margin: 20px auto; /* Add margin to avoid overlap */
-  display: block;
-  font-size: 18px;
-  border: 3px solid #7dd4d8;
-  border-radius: 5px;
+.services-container {
+  padding-top: 60px; /* Adjust padding to prevent content from being hidden under navbar */
+}
+
+
+/* Services Section */
+.services-container {
+  padding: 60px 40px;
   text-align: center;
 }
-/* Service Grid Layout */
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+/* Search Box */
+.search-box {
+  width: 60%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  outline: none;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-box:focus {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Grid */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 30px; /* Increased space between grid items */
-  width: 85%; /* Adjusted width for better desktop appearance */
-  padding: 20px 0;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
 }
 
-/* Individual Service Card */
 .service-card {
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
+  background: white;
   border-radius: 10px;
-  padding: 20px;
-  position: relative;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Improve appearance */
-  overflow: hidden; /* Prevent the hover details from overflowing the card */
-}
-
-/* Hover Effect on Card */
-.service-card:hover {
-  transform: translateY(-8px); /* Adjusted to move card upwards */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Hover Effect Details */
-.service-hover-details {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.6); /* Added background to enhance visibility */
-  color: white; /* Text color change for contrast */
-  padding: 10px;
-  border-radius: 8px;
-  width: 80%; /* Make sure the hover box fits inside the card */
-  box-sizing: border-box; /* Prevent overflow */
-}
-
-.service-card:hover .service-hover-details {
-  display: block;
-}
-
-
-/* Assigned Service Section */
-.assigned-service {
-  width: 85%; /* Adjusted width for desktop */
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin-top: 20px; /* Add space */
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Confirm Button */
-.confirm-button {
-  padding: 12px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 6px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   cursor: pointer;
-  margin-top: 15px;
-  transition: background-color 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+.selected {
+  border: 3px solid #ffcc00;
+}
+
+/* Service Details Section */
+.service-details {
+  margin-top: 50px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.service-details h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.instructions-box, 
+.address-input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.instructions-box:focus, 
+.address-input:focus {
+  border-color: #ffcc00;
+}
+
+/* Confirmation Button */
+.confirm-button {
+  background-color: #ffcc00;
+  color: #333;
+  border: none;
+  padding: 15px 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background 0.3s ease-in-out;
 }
 
 .confirm-button:hover {
-  background-color: #45a049;
+  background-color: #ff9900;
 }
 
-/* Progress Bar */
-.progress-container {
-  margin-top: 20px;
-  width: 100%;
-}
 
-.progress-bar {
-  background-color: #f3f3f3;
-  width: 100%;
-  height: 20px;
-  border-radius: 10px;
-}
 
-.progress {
-  background-color: #28a745;
-  height: 100%;
-  border-radius: 10px;
-}
+
 
 .completed-text {
-  color: green;
+  font-size: 1.2rem;
+  color: #4caf50;
   font-weight: bold;
+  margin-top: 15px;
 }
 
-/* Responsive Fix */
-@media (max-width: 1024px) {
-  .services-grid {
-    width: 90%;
-  }
-
-  .search-box {
-    width: 80%;
-    max-width: 600px; /* Adjust max width for smaller screens */
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  }
-
-  .search-box {
-    width: 80%;
-  }
-}
-
-@media (max-width: 480px) {
-  .search-box {
-    width: 90%;
-  }
+.progress-report {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }

@@ -43,37 +43,41 @@ body {
 
 /* Contact Container Styling */
 .contact-container {
-    max-width: 700px;
+    max-width: 600px;
+    
     width: 90%;
     margin: 150px auto 1px;
     padding: 40px;
     text-align: center;
-    background: #fff;
+    background: #ae5555;
     border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .contact-subtitle {
     font-size: 1.3rem;
-    color: #555;
+    color: #262222;
     text-transform: uppercase;
+    
 }
 
 .contact-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #333;
+    color: #262222;
     margin-bottom: 20px;
 }
 
 .contact-description {
     font-size: 1rem;
-    color: #777;
+    color: #262222;
     margin-bottom: 30px;
 }
 
 /* Form Styling */
 .contact-form {
+    
+    align-items: center;
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -90,7 +94,7 @@ body {
 .contact-input {
     width: 100%;
     padding: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #986f6f;
     border-radius: 8px;
     font-size: 1rem;
     transition: 0.3s ease;

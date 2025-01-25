@@ -15,7 +15,8 @@ function AboutUs()  {
         </nav>
 
         {/* About Us Content */}
-        <div className="bg-gray-900 text-white py-12 px-6 sm:px-12 min-h-screen mt-20">
+        <div className="bg-gradient-to-r from-[#ff9966] via-[#ff5e62] to-[#ff9966] text-white py-12 px-6 sm:px-12 min-h-screen mt-20">
+
 
           <div className="max-w-screen-xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">About KRIYA</h1>

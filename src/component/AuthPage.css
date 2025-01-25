@@ -1,16 +1,157 @@
-/* Custom input style */
-.custom-input {
-  background-color: white !important; /* Ensure white background */
-  border: 1px solid #ced4da; /* Light gray border */
-  padding: 12px;
-  font-size: 16px;
-  border-radius: 4px; /* Rounded corners */
-  color: #495057; /* Dark text for contrast */
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  color: #fff;
 }
 
-/* Focus state */
-.custom-input:focus {
-  outline: none;
-  border-color: #ff7e5f; /* Border color change on focus */
-  box-shadow: 0 0 4px rgba(0, 123, 255, 0.25); /* Light blue shadow */
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
+
+.logo a {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffcc00;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #ffcc00;
+}
+
+.login-btn {
+  background-color: #ffcc00;
+  padding: 8px 15px;
+  border-radius: 5px;
+  color: black !important;
+  font-weight: bold;
+}
+
+.login-btn:hover {
+  background-color: #e6b800;
+}
+
+/* Auth Form */
+.container {
+  margin-top: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+form {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  width: 400px;
+}
+
+/* Updated Input Box Styles */
+/* Input Box Styles - Always Visible */
+.custom-input {
+  background: #ffffff !important;  /* Permanent white background */
+  border: 2px solid #0056b3 !important;  /* Dark blue border */
+  color: #003366 !important; /* Dark blue text */
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Soft shadow to enhance visibility */
+  font-weight: bold;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Placeholder Text */
+.custom-input::placeholder {
+  color: #555; /* Slightly darker placeholder text for better readability */
+  font-weight: normal;
+}
+
+/* When Input is Focused */
+.custom-input:focus {
+  border-color: #ffcc00 !important; /* Yellow focus effect */
+  box-shadow: 0 0 8px rgba(255, 204, 0, 0.6); /* Yellow glow */
+  outline: none;
+  background: #ffffff !important; /* Ensuring background remains white */
+}
+
+
+/* Labels */
+.form-label {
+  color: white;
+  font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+  width: 100%;
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: #e6b800;
+}
+
+/* Social Buttons */
+.text-center p {
+  color: #fff;
+}
+
+.btn-floating {
+  font-size: 20px;
+  color: white;
+  border-radius: 50%;
+  padding: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-floating:hover {
+  transform: scale(1.1);
+}
+
+.fab {
+  font-size: 20px;
+}
+
