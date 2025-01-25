@@ -18,8 +18,8 @@ function Home() {
         <ul className="nav-links">
           
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="auth" className="login-btn">Log In / Sign Up</Link></li>
+          <li><Link to="/about-us">About Us</Link></li>
+           <li><Link to="/auth" className="login-btn">Log In / Sign Up</Link></li>
           <li><Link to="/contact">Contact Us</Link></li>
         </ul>
       </nav>

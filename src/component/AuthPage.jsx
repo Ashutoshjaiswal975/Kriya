@@ -1,73 +1,117 @@
-import React, { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"; // Import Link for navigation
-import "./AuthPage.css"; // External CSS for styling
+import React from "react";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import "mdb-react-ui-kit/dist/css/mdb.min.css";
+import "@fortawesome/fontawesome-free/css/all.min.css";
 
-function AuthPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const navigate = useNavigate(); // For navigation
-
-  // Simulate login process
-  const handleLogin = (e) => {
-    e.preventDefault();
-
-    // For now, we just check if username and password are not empty
-    if (username && password) {
-      setError(""); // Clear any previous errors
-      navigate("/services"); // Redirect to services page after login
-    } else {
-      setError("Both fields are required!"); // Show error if fields are empty
-    }
-  };
-
+const AuthPage = () => {
   return (
-    <div className="auth-container">
-      {/* Top Navigation Bar with Home Button */}
+    <>
+      {/* Navigation Bar */}
       <nav className="navbar">
-        <div className="logo">Kriya</div>
+        <div className="logo"><Link to="/home">Kriya</Link></div>
         <ul className="nav-links">
-          <li><Link to="/" className="home-link">Home</Link></li>
-         
-          
-          <li><Link to="/auth" className="login-btn">Log In / Sign Up</Link></li>
+          <li><Link to="/home">Home</Link></li>
+          <li><Link to="/services">Services</Link></li>
+           <li><Link to="/about-us">About Us</Link></li>
+          <li><Link to="/auth" className="login-btn">Log In / Sign Up</Link></li> {/* Corrected to '/auth' */}
           <li><Link to="/contact">Contact Us</Link></li>
         </ul>
       </nav>
 
-      <h2>Login / Sign Up</h2>
-      <form onSubmit={handleLogin} className="auth-form">
-        <div className="form-group">
-          <label htmlFor="username">Username</label>
-          <input
-            type="text"
-            id="username"
-            value={username}
-            onChange={(e) => setUsername(e.target.value)}
-            placeholder="Enter username"
-            required
-          />
-        </div>
+      {/* Auth Form */}
+      <div className="container d-flex justify-content-center align-items-center vh-100">
+        <form className="w-50">
+          {/* Email input */}
+          <div className="form-outline mb-4">
+            <input
+              type="email"
+              id="form2Example1"
+              className="form-control custom-input"
+            />
+            <label className="form-label" htmlFor="form2Example1">
+              Email address
+            </label>
+          </div>
 
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input
-            type="password"
-            id="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="Enter password"
-            required
-          />
-        </div>
+          {/* Password input */}
+          <div className="form-outline mb-4">
+            <input
+              type="password"
+              id="form2Example2"
+              className="form-control custom-input"
+            />
+            <label className="form-label" htmlFor="form2Example2">
+              Password
+            </label>
+          </div>
 
-        {error && <p className="error-message">{error}</p>} {/* Error message */}
-        <button type="submit" className="login-button">Log In</button>
-      </form>
+          {/* Checkbox & Forgot Password */}
+          <div className="row mb-4">
+            <div className="col d-flex justify-content-center">
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="form2Example31"
+                  defaultChecked
+                />
+                <label className="form-check-label" htmlFor="form2Example31">
+                  Remember me
+                </label>
+              </div>
+            </div>
+            <div className="col">
+              <a href="#!">Forgot password?</a>
+            </div>
+          </div>
 
-      <p>Don't have an account? <span className="signup-link">Sign Up</span></p>
-    </div>
+          {/* Submit button */}
+          <button
+            type="button"
+            className="btn btn-primary btn-block mb-4"
+          >
+            Sign in
+          </button>
+
+          {/* Register buttons */}
+          <div className="text-center">
+            <p>
+              Not a member? <a href="#!">Register</a>
+            </p>
+            <p>or sign up with:</p>
+            <button
+              type="button"
+              className="btn btn-link btn-floating mx-1"
+            >
+              <i className="fab fa-facebook-f"></i>
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-link btn-floating mx-1"
+            >
+              <i className="fab fa-google"></i>
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-link btn-floating mx-1"
+            >
+              <i className="fab fa-twitter"></i>
+            </button>
+
+            <button
+              type="button"
+              className="btn btn-link btn-floating mx-1"
+            >
+              <i className="fab fa-github"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </>
   );
-}
+};
 
 export default AuthPage;

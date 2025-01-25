@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom"; // Import Link for navigation
 import "./Services.css"; // External CSS for styling
 
+// List of services offered
 const servicesList = [
   { id: 1, name: "Health Department", duration: "2 hours", description: "Get immediate health assistance from certified professionals." },
   { id: 2, name: "Electrician Service", duration: "1.5 hours", description: "Experienced electricians to fix all your electrical issues." },
@@ -39,14 +40,14 @@ function Services() {
     setAssignedWorker(assigned);
   };
 
-  // Simulate progress update
+  // Simulate progress update when work is started
   useEffect(() => {
     if (isWorkStarted && progress < 100) {
       const interval = setInterval(() => {
         setProgress((prev) => (prev >= 100 ? 100 : prev + 10));
       }, 3000);
 
-      return () => clearInterval(interval);
+      return () => clearInterval(interval); // Cleanup interval when the component unmounts or progress reaches 100
     }
   }, [isWorkStarted, progress]);
 
@@ -59,12 +60,12 @@ function Services() {
     <div className="services-container">
       {/* Top Navigation Bar */}
       <nav className="navbar">
-        <div className="logo">Kriya</div>
+        <div className="logo"><Link to="/home">Kriya</Link></div>
         <ul className="nav-links">
           <li><Link to="/" className="home-link">Home</Link></li>
-          <li><Link to="/services">Services</Link></li>
-          <li><Link to="/about">About Us</Link></li>
-          <li><Link to="/" className="login-btn">Log In / Sign Up</Link></li>
+          
+           <li><Link to="/about-us">About Us</Link></li>
+          <li><Link to="/auth" className="login-btn">Log In / Sign Up</Link></li> {/* Corrected link */}
           <li><Link to="/contact">Contact Us</Link></li>
         </ul>
       </nav>
@@ -99,6 +100,7 @@ function Services() {
         ))}
       </div>
 
+      {/* Display selected service and assigned worker */}
       {selectedService && assignedWorker && (
         <div className="assigned-service">
           <h3>Service Selected: {selectedService.name}</h3>
@@ -124,3 +126,4 @@ function Services() {
 }
 
 export default Services;
+
