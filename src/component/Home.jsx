@@ -27,8 +27,8 @@ function Home() {
       {/* Hero Section */}
       <header className="hero">
         <h1>Welcome to Kriya</h1>
-        <p>Your journey towards innovation starts here</p>
-        <button className="cta-button" onClick={handleGetStarted}>Get Started</button>
+        <p>YOUR Needs are OUR Work</p>
+        <Link to="/services"> <button className="cta-button" onClick={handleGetStarted}>Get Started</button></Link>
       </header>
     </div>
   );

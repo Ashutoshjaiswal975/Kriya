@@ -21,20 +21,19 @@ function AboutUs()  {
           <div className="max-w-screen-xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl font-bold mb-6">About KRIYA</h1>
             <p className="text-lg sm:text-xl mb-10">
-              Welcome to KRIYA! Our goal is to bridge technical and financial
-              barriers, empowering individuals and businesses to create websites,
-              sell online, and reach global audiences. We provide innovative solutions
-              for both beginners and experts alike!
+            At KRIYA, we are dedicated to providing a seamless and professional service experience, ensuring that every client’s needs are met with efficiency and expertise. Our platform serves as a one-stop solution where individuals and businesses can request a wide range of services, and we guarantee fulfillment within the promised time frame through our highly skilled professionals.
+
+With our commitment to excellence, KRIYA connects clients with trusted service providers across various sectors, including home cleaning, salon and beauty care, healthcare assistance, business support, and many more. Whether it’s a household requirement or a corporate necessity, our platform ensures convenience, reliability, and superior service quality.
+
+Guided by our motto, "Your Needs Are Our Job," we strive to redefine service accessibility, making professional assistance just a request away.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold mb-4">Our Strengths</h2>
                 <p className="text-base mb-4">
-                  We are committed to utilizing technology and human resources
-                  effectively, ensuring that every client gets a dedicated team
-                  working remotely, bridging the gap of time zones and physical
-                  distances.
+                
+At KRIYA, we combine technology and skilled professionals to deliver seamless, high-quality services. Our dedicated teams work remotely, ensuring accessibility across time zones and locations. With a focus on innovation, reliability, and professionalism, we strive to meet every client’s needs efficiently and effectively.
                 </p>
                 <img
                   className="w-full h-48 object-cover rounded-lg"
@@ -46,9 +45,12 @@ function AboutUs()  {
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold mb-4">Our Goal</h2>
                 <p className="text-base mb-4">
-                  Our unique business principle is ‘Same quality, but significantly
-                  lower cost’. We help small and medium-sized businesses overcome
-                  outsourcing challenges while providing cost-effective solutions.
+                  
+                Our goal at KRIYA is to be a one-stop platform for all service needs, 
+                connecting clients with skilled professionals for timely, efficient, 
+                and high-quality solutions. Whether it's home cleaning, salon services, 
+                healthcare, or any other service, we ensure reliability, professionalism, 
+                and customer satisfaction.
                 </p>
                 <img
                   className="w-full h-48 object-cover rounded-lg"
@@ -60,9 +62,10 @@ function AboutUs()  {
               <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
                 <h2 className="text-2xl font-semibold mb-4">Our Vision</h2>
                 <p className="text-base mb-4">
-                  We strive to deliver end-to-end solutions using the latest
-                  technology, all while ensuring that every project is executed
-                  successfully, meeting our clients' expectations and needs.
+                Our vision at KRIYA is to revolutionize the service industry by 
+                seamlessly connecting clients with trusted professionals. We aim 
+                to create a hassle-free, efficient, and customer-centric platform
+                 where every need is met with quality, reliability, and professionalism.
                 </p>
                 <img
                   className="w-full h-48 object-cover rounded-lg"
@@ -76,9 +79,11 @@ function AboutUs()  {
           <div className="mt-12 text-center">
             <h2 className="text-3xl font-semibold mb-6">Meet Our Team</h2>
             <p className="text-lg sm:text-xl">
-              Our team consists of skilled professionals who work remotely to
-              provide innovative solutions and ensure top-quality service for all
-              clients.
+            Our team at KRIYA is composed of highly skilled professionals
+             dedicated to delivering top-quality services across various 
+             domains. Whether it's home cleaning, salon services, healthcare,
+              or any other requirement, we ensure reliable, efficient, and 
+              professional solutions tailored to your needs
             </p>
           </div>
         </div>
